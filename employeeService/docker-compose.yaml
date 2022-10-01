@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+
+  demo:
+    image: demo
+    networks:
+      - my-network
+    ports:
+      - 8080:8080
+    depends_on:
+      - database
+
+  database:
+    image: techvakeelm32/my-sql:v1
+    networks:
+      - my-network
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin123
+      - MYSQL_DATABASE=test
+networks:
+  my-network:
+
+
+
