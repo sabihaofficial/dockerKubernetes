@@ -18,8 +18,8 @@ public class EmployeeController {
 //        return testDataService.getTestDataById(id);
 //    }
 
-    @GetMapping("/getEmployees")
-    public List<EmployeeData> getTestData() {
+    @GetMapping("/getemployees")
+    public List<EmployeeData> getAllEmployees() {
         return employeeDataService.getAllTestData();
     }
 //
@@ -27,4 +27,5 @@ public class EmployeeController {
 //    public void addData(@PathVariable("id") Long id, @PathVariable("name") String name) {
 //        testDataService.putTestData(id, name);
 //    }
+
 }

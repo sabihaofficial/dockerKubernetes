@@ -1,12 +1,10 @@
 package com.example.microservice2.controller;
 
-import com.example.microservice2.domain.EmployeeData;
+import com.example.microservice2.domain.Department;
 import com.example.microservice2.service.DepartmentDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 public class DepartmentDataController {
@@ -14,10 +12,11 @@ public class DepartmentDataController {
     DepartmentDataService departmentDataService;
 
 
-    @GetMapping("/getEmployeeData")
-    public List<EmployeeData> getTestData() {
+    @GetMapping("/get/department/hr")
+    public Department getTestData() {
+        Department departmentData = departmentDataService.getHRDepartmentData();
 
-        return departmentDataService.getEmployeeData();
+        return departmentData;
     }
 
 }
