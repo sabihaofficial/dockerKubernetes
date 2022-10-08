@@ -1,0 +1,12 @@
+apiVersion : v1
+kind : Service
+metadata:
+  name : employee-webapp
+spec :
+  selector :
+    - app : webapp
+  ports :
+    - name : http
+      port : 80
+      nodeport : 30080
+  type : NodePort
