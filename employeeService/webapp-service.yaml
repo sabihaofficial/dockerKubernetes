@@ -5,6 +5,7 @@ metadata:
 spec :
   selector :
     app : webapp
+
   ports :
     - name : http
       port : 80
