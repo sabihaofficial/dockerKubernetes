@@ -4,7 +4,7 @@ metadata:
   name : employee-webapp
 spec :
   selector :
-    app : webapp
+    employee : webapp
 
   ports :
     - name : http
